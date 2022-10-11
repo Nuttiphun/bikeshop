@@ -29,6 +29,7 @@ class ProductController extends Controller
     }
 
     public function __construct() { 
+        $this->middleware('auth');
         $this->rp = Config::get('app.result_per_page');
     }
 

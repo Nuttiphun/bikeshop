@@ -22,14 +22,29 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="{{ URL::to('home') }}">หน้าแรก</a></li>
+                        <li><a href="{{ URL::to('home') }}">หน้าแรก</a></li> @guest
+                        @else
                         <li><a href="{{ URL::to('product') }}">ข้อมูลสินค้า </a></li>
                         <li><a href="{{ URL::to('category') }}">ข้อมูลประเภทสินค้า</a></li>
-                        <li><a href="#">รายงาน</a></li>
+                        <li><a href="#">รายงาน</a></li> @endguest
                     </ul>
+                    <ul class="nav navbar-nav navbar-right"> @guest
+                    <li><a href="{{ route('login') }}">ล็อกอิน</a></li>
+                    <li><a href="{{ route('register') }}">ลงทะเบียน</a></li> @else
+                    <li><a href="#">{{ Auth::user()->name }} </a></li>
+                    <li><a href="/logout">ออกจากระบบ </a></li> @endguest
+                    <li><a href="#"><i class="fa fa-shopping-cart"></i> ตะกร้า 
+                        <span class="label label-danger"> 
+                            @if (Session::has('cart_items')) 
+                                    {{ count(Session::get('cart_items')) }}
+                            @else
+                                    {{ count(array()) }}
+                            @endif
+                        </span></a></li>
+                    </ul> 
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#">ณัฐชนก วิสุทธิพันธุ์ 6306021620131</a></li>
-                    </ul>
+                    </ul> 
                 </div>
             </div>
         </nav>

@@ -7,7 +7,7 @@
     <h1>รายการสินค้า</h1>
 
     <div class="panel panel-default">
-        <div class="panel-heading">
+    <div class="panel-heading">
             <div class="panel-title"><strong>รายการ</strong></div>
         </div>
 
