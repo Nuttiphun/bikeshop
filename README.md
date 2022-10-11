@@ -13,6 +13,17 @@ if get error. use
 composer install --ignore-platform-reqs
 ```
 
+## Install package
+### When something wrong use
+```cmd
+composer update
+```
+
+```cmd
+composer require laravel/ui
+
+```
+
 ## create .env
 ```cmd
 copy .env.example .env
