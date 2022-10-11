@@ -9,14 +9,11 @@ use Illuminate\Support\Facades\Session;
 
 class CartController extends Controller
 {
-<<<<<<< HEAD
 
     public function __construct() { 
         $this->middleware('auth');
     }
 
-=======
->>>>>>> d158f063be1a86df1598f0d8041de3cb23b5daf7
     public function viewCart() {
         $cart_items = Session::get('cart_items');
          return view('cart/index', compact('cart_items'));

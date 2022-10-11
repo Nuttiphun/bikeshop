@@ -1,5 +1,4 @@
 {
-    
     "name": "laravel/laravel",
     "type": "project",
     "description": "The Laravel Framework.",
@@ -52,9 +51,7 @@
     },
     "extra": {
         "laravel": {
-            "dont-discover": [
-                "laravel/dusk"
-            ]
+            "dont-discover": []
         }
     },
     "config": {
