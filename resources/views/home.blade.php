@@ -32,7 +32,11 @@
                             </div>
 
                             <a href="#" class="btn btn-success btn-block" ng-click="addToCart(p)">
+<<<<<<< HEAD
                             <i class="fa fa-shopping-cart"></i> หยิบใส่ตะกร้า</a> 
+=======
+                            <i class="fa fa-shopping-cart"></i> หยิบใส่ตะกร้า</a>
+>>>>>>> d158f063be1a86df1598f0d8041de3cb23b5daf7
                         </div>
                     </div>
                     <!-- end product card -->
