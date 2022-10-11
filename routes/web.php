@@ -18,7 +18,7 @@ use App\Http\Controllers\CartController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::get('/logout', [HomeController::class, 'logout']);

@@ -1,10 +1,12 @@
 @extends('layouts.master')
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
+    
+    <div class="row justify-content-center ">
+        <div class=col-md-2> </div>
         <div class="col-md-8">
             <div class="card">
-                <div class="panel panel-default">
+                <div class="panel panel-default ">
                     <div class="panel-heading">
                         <div class="card-header"><strong></strong>{{ __('ยินดีต้อนรับ') }}</strong></div>
                     </div>
@@ -15,10 +17,12 @@
                         @csrf
 
                         <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('อีเมล์') }}</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('ชื่อผู้ใช้') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                <input id="name" type="name" class="form-control 
+                                @error('name') is-invalid @enderror" 
+                                name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
