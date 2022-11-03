@@ -12,6 +12,8 @@
         <script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
         <script src="{{ asset('js/angular.min.js') }}"></script>
         <script src="{{ asset('vendor/toastr/toastr.min.js') }}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js" integrity="sha512-F636MAkMAhtTplahL9F6KmTfxTmYcAcjcCkyu0f0voT3N/6vzAuJ4Num55a0gEJ+hRLHhdz3vDvZpf6kqgEa5w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-toggle/2.2.2/css/bootstrap-toggle.css" integrity="sha512-9tISBnhZjiw7MV4a1gbemtB9tmPcoJ7ahj8QWIc0daBCdvlKjEA48oLlo6zALYm3037tPYYulT0YQyJIJJoyMQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
 
     <body>
@@ -26,7 +28,11 @@
                         @else
                         <li><a href="{{ URL::to('product') }}">ข้อมูลสินค้า </a></li>
                         <li><a href="{{ URL::to('category') }}">ข้อมูลประเภทสินค้า</a></li>
-                        <li><a href="#">รายงาน</a></li> @endguest
+                        <li><a href="/order">รายการสั่งซื้อ</a></li>
+                        <li><a href="/customer">จัดการข้อมูลผู้ใช้</a></li>
+                        <li><a href="/product">จัดการข้อมูลสินค้า</a></li>
+                        
+                        @endguest
                     </ul>
                     <ul class="nav navbar-nav navbar-right"> 
                         <li><a href="{{URL::to('cart/view')}}"><i class="fa fa-shopping-cart"></i> ตะกร้า 
